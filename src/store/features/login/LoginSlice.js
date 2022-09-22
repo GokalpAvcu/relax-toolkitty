@@ -1,16 +1,23 @@
 import createSlice from '@reduxjs/toolkit'; // createSlice reduxjs/toolkit içerisinde bulunan bir fonksiyondur. createSlice ile reducer ve actionlar oluşturulur.
 
+const initialState = {name:"", surname:""} // initial state
+
 export const LoginSlice = createSlice({ // createSlice fonksiyonu bir obje döndürür. Bu obje içerisinde reducer ve actionlar bulunur.
     name: 'Login', // name kısmı önemli çünkü reducer ismi olarak geçiyor
-    initialState: { // reducer başlangıç değeri
-        isLoggedIn: false,
-        user: null
-    },
+    initialState: initialState, // reducer başlangıç değeri
     reducers: { // actionlar
-        Login: (state,action) => {
+        Login: (state,action) => { // action ismi
             state.isLoggedIn = true;
-            state.user = action.payload;
+            state.value = action.payload; // action içerisinden bir payload değeri gönderiyorum ve state içerisindeki value değerine atanır. useSelector ile herhangi bir component içerisinde bu değeri kullanabiliriz.
+        },
+        Logout: (state) =>{
+            state.value = initialState; // state içerisindeki value değeri initialState değerine eşitlenir.
         }
     }
 })
+
+export const loginReducer = LoginSlice.reducer; // reducer export edilir
+
+
+
 
