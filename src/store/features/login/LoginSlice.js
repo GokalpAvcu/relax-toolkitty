@@ -6,17 +6,18 @@ export const LoginSlice = createSlice({ // createSlice fonksiyonu bir obje dönd
     name: 'Login', // name kısmı önemli çünkü reducer ismi olarak geçiyor
     initialState: initialState, // reducer başlangıç değeri
     reducers: { // actionlar
-        Login: (state,action) => { // action ismi
+        loginAction: (state,action) => { // action ismi
             state.isLoggedIn = true;
             state.value = action.payload; // action içerisinden bir payload değeri gönderiyorum ve state içerisindeki value değerine atanır. useSelector ile herhangi bir component içerisinde bu değeri kullanabiliriz.
         },
-        Logout: (state) =>{
+        logoutAction: (state) =>{
             state.value = initialState; // state içerisindeki value değeri initialState değerine eşitlenir.
         }
     }
 })
 
 export const loginReducer = LoginSlice.reducer; // reducer export edilir
+export const {loginAction, logoutAction} = LoginSlice.actions; // actionlar export edilir
 
 
 

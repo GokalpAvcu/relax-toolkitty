@@ -1,4 +1,6 @@
 import React from 'react'
+import {useDispatch} from 'react-redux' // useDispatch'i almam lazım ki actionları dispatch edeip çalıştırabileyim.
+
 
 export const LoginComponent = () => {
   return (
