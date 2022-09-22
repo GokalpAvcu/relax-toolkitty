@@ -1,4 +1,4 @@
-import createSlice from '@reduxjs/toolkit'; // createSlice reduxjs/toolkit içerisinde bulunan bir fonksiyondur. createSlice ile reducer ve actionlar oluşturulur.
+import { createSlice } from "@reduxjs/toolkit"; // createSlice reduxjs/toolkit içerisinde bulunan bir fonksiyondur. createSlice ile reducer ve actionlar oluşturulur.
 
 const initialState = {name:"", surname:""} // initial state
 
