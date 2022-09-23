@@ -9,7 +9,7 @@ export const ProfileComponent = () => {
 
   return (
     <div>
-      
+    {/* yukarıdaki useSelector ile bu verileri çekmiş oldum */}
     <h1>Profile Component</h1>
     <p> Name: {user.name} </p>
     <p> Surname: {user.surname}</p>
