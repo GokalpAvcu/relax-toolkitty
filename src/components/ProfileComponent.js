@@ -6,9 +6,10 @@ import {useSelector} from 'react-redux' // useSelector ile state içerisindeki d
 export const ProfileComponent = () => {
 
   const user = useSelector(state => state.loginReducer.value) // state (store.js) içerisindeki loginReducer içerisindeki value değerini alıp user değişkenine atadım.
+  const theme = useSelector(state => state.themeReducer.value) // state (store.js) içerisindeki themeReducer içerisindeki value değerini alıp theme değişkenine atadım.
 
   return (
-    <div>
+    <div style={{color:theme}}>
     {/* yukarıdaki useSelector ile bu verileri çekmiş oldum */}
     <h1>Profile Component</h1>
     <p> Name: {user.name} </p>

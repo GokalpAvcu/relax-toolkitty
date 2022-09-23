@@ -4,7 +4,6 @@ import {loginAction, logoutAction} from '../store/features/login/LoginSlice' // 
 
 
 export const LoginComponent = () => {
-
 const dispatch = useDispatch(); // dispatch'i alıyorum
 
   return (
