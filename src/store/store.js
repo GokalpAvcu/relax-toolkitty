@@ -5,6 +5,7 @@ import { themeReducer } from "./features/theme/ThemeSlice";
 
 const rootReducer = combineReducers({
   // combineReducers ile bir obje döndürüyorum. Bu obje içerisinde reducer'lar bulunuyor.
+  // themeReducer ve loginReducer'ı rootReducer'a ekliyorum.
   loginReducer,
   themeReducer
 });

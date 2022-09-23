@@ -13,7 +13,7 @@ export const ThemeComponent = () => {
       <input type="text" onChange={(e) => {setColor(e.target.value)}} /> {/* input'a yazdığımız değeri color değişkenine atıyorum. */}
       
       <button onClick={() => {  // butona tıklandığında dispatch ile setTheme fonksiyonuna color değişkenini gönderiyorum.      
-        dispatch(setTheme(color))}}> Set Color </button> {/* setTheme fonksiyonu içerisindeki payload değişkenine color değişkenini atıyorum. */}
+        dispatch(setTheme(color))}}>Set Color</button> {/* setTheme fonksiyonu içerisindeki payload değişkenine color değişkenini atıyorum. */}
     </div>
   )
 }
