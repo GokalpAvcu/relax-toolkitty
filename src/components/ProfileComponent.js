@@ -4,12 +4,15 @@
 import React from 'react'
 import {useSelector} from 'react-redux' // useSelector ile state içerisindeki değeri alıp kullanabilirim.
 export const ProfileComponent = () => {
+
+  const user = useSelector(state => state.loginReducer.value) // state (store.js) içerisindeki loginReducer içerisindeki value değerini alıp user değişkenine atadım.
+
   return (
     <div>
       
     <h1>Profile Component</h1>
-    <p>Name: Gökalp </p>
-    <p>Surname: Avcu </p>
+    <p> Name: {user.name} </p>
+    <p> Surname: {user.surname}</p>
 
     </div>
   )
